@@ -81,13 +81,11 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """ Hello *{}*, My name is *{}*! 
 A telegram group management bot. I'm here to help you to manage your groups.
-I have lots of handy features such as:
-‣ Warning system
-‣ Artificial intelligence
-‣ Flood control system
-‣ Note keeping system
-‣ Filters keeping system
-‣ Approvals and much more.
+
+◑ *Uptime:* {}
+◑ {} *Users,across* {} *chats.*
+
+Powered by -: [Grb network](https://t.me/grb_network)
 
 So what are you waiting for?
 Add me in your groups and give me full rights to make me function well.
@@ -96,7 +94,7 @@ Add me in your groups and give me full rights to make me function well.
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add me to your chat ➕️", url="t.me/Yone_Robot?startgroup=true"),
+            text=" Add me to your chat ", url="t.me/SparrowRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Admin", callback_data="admin_back"),
@@ -194,13 +192,13 @@ def yone_about_callback(update: Update, context: CallbackContext):
     if query.data == "yone_":
         query.message.edit_text(
             text="""Hello *{}*, My name is *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
-            \n ‣ I can Restrict Users.
-            \n ‣ I can Greet Users with customizable welcome message and even set a group rules
-            \n ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
-            \n ‣ I can Warn Users until they reach max Warns, with each predefined actions such as Ban, Mute and Kick etc.
-            \n ‣ I have Note Keeping System, Blacklists, And even Predetermined replies on certain keywords.
-            \n ‣ I check Admins Permissions before perform any Command and more Stuffs.
-            \n ‣ I have an advanced Artificial Chatbot System, so can talk with users like humans.
+            \n ◑ I can Restrict Users.
+            \n ◑ I can Greet Users with customizable welcome message and even set a group rules
+            \n ◑ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
+            \n ◑ I can Warn Users until they reach max Warns, with each predefined actions such as Ban, Mute and Kick etc.
+            \n ◑ I have Note Keeping System, Blacklists, And even Predetermined replies on certain keywords.
+            \n ◑ I check Admins Permissions before perform any Command and more Stuffs.
+            \n ◑ I have an advanced Artificial Chatbot System, so can talk with users like humans.
             \n\n*If you have any Question, You can join Support Chat. My Developer Team will Answer. Check Link Below*""".format(
                         escape_markdown(first_name), escape_markdown(context.bot.first_name)),
             parse_mode=ParseMode.MARKDOWN,
@@ -208,8 +206,8 @@ def yone_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/Yone_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/Yone_Updates"),
+                     InlineKeyboardButton(text="Support", url="t.me/elena_support_group"),
+                     InlineKeyboardButton(text="News", url="t.me/grb_network"),
                    ],
                    [
                     InlineKeyboardButton(text="Back", callback_data="yone_back")
